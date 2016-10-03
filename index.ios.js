@@ -24,6 +24,7 @@ import Sponsors from './app/js/scenes/Sponsors';
 import SponsorDetail from './app/js/scenes/SponsorDetail';
 import Venue from './app/js/scenes/Venue';
 import CodeOfConduct from './app/js/scenes/CodeOfConduct';
+import Containers from './app/js/scenes/Containers';
 
 class JSConfUY extends Component {
 
@@ -86,6 +87,8 @@ class JSConfUY extends Component {
         return <Venue navigator={navigator} />;
       case 'CodeOfConduct':
         return <CodeOfConduct navigator={navigator} />;
+      case 'Containers':
+        return <Containers navigator={navigator} />;
       default:
         return null;
     }
@@ -166,6 +169,9 @@ class JSConfUY extends Component {
         </TouchableHighlight>
         <TouchableHighlight onPress={() => this._navigateToScene('CodeOfConduct')}>
           <Text style={buttonStyle}>Code of Conduct</Text>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={() => this._navigateToScene('Containers')}>
+          <Text style={buttonStyle}>Containers</Text>
         </TouchableHighlight>
       </View>
     );
